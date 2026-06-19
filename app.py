@@ -22,6 +22,7 @@ st.set_page_config(page_title="MNIST Digit Classifier Demo", layout="wide")
 BASE_DIR = Path(__file__).parent
 MODEL_PATH = BASE_DIR / "mnist_mlp.pkl"
 MNIST_IMAGE_PATH = BASE_DIR / "MNIST_dataset_example.png"
+UWA_AICLUB_IMAGE_PATH = BASE_DIR / "UWA_AI_Club.png"
 
 
 # -----------------------------
@@ -95,6 +96,52 @@ if "results" not in st.session_state:
 page_left, page_main, page_right = st.columns([1, 3, 1])
 
 with page_main:
+
+    # -----------------------------
+    # UWA AI Club header
+    # -----------------------------
+    header_left, header_right = st.columns([1, 4])
+
+    with header_left:
+        if UWA_AICLUB_IMAGE_PATH.exists():
+            st.image(
+                UWA_AICLUB_IMAGE_PATH,
+                width=300
+            )
+
+
+    with header_right:
+        st.markdown(
+    """
+    <div style="margin-top: 12px; margin-bottom: 25px;">
+        <div style="
+            font-size: 34px;
+            font-weight: 700;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        ">
+            UWA AI Club
+        </div>
+        <div style="
+            font-size: 34px;
+            font-weight: 700;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        ">
+            2026 Winter Project
+        </div>
+        <div style="
+            ont-size: 34px;
+            font-weight: 700;
+            line-height: 1.35;
+        ">
+            Machine Learning Demo
+        </div>
+    </div>
+    """,
+            unsafe_allow_html=True
+        )
+
 
     # -----------------------------
     # Header
