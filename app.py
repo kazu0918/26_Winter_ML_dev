@@ -21,7 +21,7 @@ st.set_page_config(page_title="MNIST Digit Classifier Demo", layout="wide")
 # -----------------------------
 BASE_DIR = Path(__file__).parent
 MODEL_PATH = BASE_DIR / "mnist_mlp.pkl"
-MNIST_IMAGE_PATH = BASE_DIR / "MNIST.png"
+MNIST_IMAGE_PATH = BASE_DIR / "MNIST_dataset_example.png.png"
 
 
 # -----------------------------
