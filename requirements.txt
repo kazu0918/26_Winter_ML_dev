@@ -1,3 +1,6 @@
 streamlit
 streamlit-mnist-canvas
+scikit-learn
 numpy
+pandas
+altair
